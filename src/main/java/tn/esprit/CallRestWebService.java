@@ -29,15 +29,15 @@ public class CallRestWebService {
 	public static void main(String[] args) {
 		HttpClient client = new DefaultHttpClient();
 		HttpGet request = new HttpGet(endpoint);
-		String ip = "not found";
+		String ip = "not found ddd";
 		try {
 			HttpResponse response = client.execute(request);
 			String jsonResponse = EntityUtils.toString(response.getEntity());
-			System.out.println("Response as String : " + jsonResponse);
+			System.out.println("Response as String cahaima: " + jsonResponse);
 			JSONObject responseObj = new JSONObject(jsonResponse);
 
 			//ip = responseObj.getString("origin");
-			ip = responseObj.getString("query");
+			ip = responseObj.getString("query q");
 			System.out.println("chaima : " + ip); 
 
 		} catch (IOException e) {
